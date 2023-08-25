@@ -1,0 +1,43 @@
+# R script for Power BI 
+
+ 
+
+# Load required packages 
+
+library(dplyr) 
+
+library(ggplot2) 
+
+ 
+
+# Read data from Power BI dataset 
+
+data <- dataset  # Replace 'dataset' with the name of your dataset in Power BI 
+
+ 
+
+# Perform data manipulation and analysis 
+
+# Example: Calculate the average value of a numeric column 
+
+avg_value <- data %>% 
+
+  summarise(avg_value = mean(numeric_column)) 
+
+ 
+
+# Plotting a bar chart 
+
+chart <- ggplot(data, aes(x = category_column, y = numeric_column)) + 
+
+  geom_bar(stat = "identity", fill = "blue") + 
+
+  labs(x = "Category", y = "Numeric Column", title = "Bar Chart") 
+
+ 
+
+# Export the results back to Power BI 
+
+avg_value  # Replace with the appropriate Power BI dataset and column names 
+
+plot(chart)  # Replace with the appropriate Power BI visual name 
